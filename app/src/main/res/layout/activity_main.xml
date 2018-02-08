@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <client.yalantis.com.foldingtabbar.FoldingTabBar
+        android:id="@+id/folding_tab_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        app:menu="@menu/menu_tab_bar"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_reg"
+        android:background="@drawable/background_additional_buttons"
+        app:backgroundTint="@color/colorGreen"
+        android:layout_width="@dimen/ftb_size_mini"
+        app:elevation="0dp"
+        app:fabSize="normal"
+        android:layout_height="@dimen/ftb_size_mini"
+        android:layout_alignTop="@+id/folding_tab_bar"
+        android:layout_marginTop="@dimen/additional_button_top_margin"
+        android:layout_marginStart="@dimen/additional_button_margin"
+        android:padding="@dimen/additional_button_top_margin"
+        android:src="@drawable/add_reg"
+        android:layout_toEndOf="@+id/folding_tab_bar"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/logout"
+        android:background="@drawable/background_additional_buttons"
+        app:backgroundTint="@color/colorLogout"
+        android:layout_width="@dimen/ftb_size_mini"
+        app:elevation="0dp"
+        app:fabSize="normal"
+        android:layout_height="@dimen/ftb_size_mini"
+        android:layout_alignTop="@+id/folding_tab_bar"
+        android:layout_marginTop="@dimen/additional_button_top_margin"
+        android:layout_marginStart="@dimen/additional_button_margin"
+        android:padding="@dimen/additional_button_top_margin"
+        android:src="@drawable/exit"
+        android:layout_toEndOf="@+id/folding_tab_bar"/>
+
+
+</RelativeLayout>
